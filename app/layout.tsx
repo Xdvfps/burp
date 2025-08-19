@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { BackgroundWave } from "@/components/background-wave";
 import Link from "next/link";
-import { CustomLogo, XLogo, DiscordLogo } from "@/components/logos";
+import { CustomLogo, XLogo, BagsAppLogo } from "@/components/logos";
 
 export const metadata: Metadata = {
   title: "ConvAI",
@@ -18,7 +18,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           <nav className="sm:fixed w-full top-0 left-0 grid grid-cols-2 py-4 px-8">
             <div className="flex">
               <Link href="/" prefetch={true}>
-                <CustomLogo className="h-[60px] w-auto hover:opacity-75" />
+                <CustomLogo className="h-[45px] w-auto hover:opacity-75" />
               </Link>
             </div>
 
@@ -33,13 +33,13 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
                 <XLogo className="w-5 h-5 hover:text-gray-500 text-[#24292f]" />
               </Link>
               <Link
-                href="https://discord.gg/U3YBQwQX"
+                href="https://bags.fm" // Replace with official @BagsApp URL if different
                 target="_blank"
                 rel="noopener noreferrer"
                 className="py-0.5"
-                aria-label="Join our Discord server"
+                aria-label="Visit BagsApp"
               >
-                <DiscordLogo className="w-5 h-5 hover:text-gray-500 text-[#24292f]" />
+                <BagsAppLogo className="w-5 h-5 hover:opacity-75" />
               </Link>
             </div>
           </nav>
